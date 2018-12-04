@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="fullpage">
+		<div class="section first">
+			<div class="logo"></div>
+			<div class="text">
+             <img src="./images/text_1.png" alt="" class="move">
+			 <img src="./images/text_2.png" alt="" class="move">
+			 <img src="./images/text_3.png" alt="" class="move">
+			 <img src="./images/text_4.png" alt="" class="move">
+			 <img src="./images/text_5.png" alt="" class="move">
+			 <img src="./images/text_6.png" alt="" class="move">
+			 <img src="./images/text_7.png" alt="" class="move">
+			 <img src="./images/text_8.png" alt="" class="move">
+			</div>
+			<div class="info"></div>
+		</div>
+		<div class="section second">
+			<div class="d">
+				<img src="./images/shield_1.png" alt="">
+				<img src="./images/shield_2.png" alt="">
+				<img src="./images/shield_3.png" alt="">
+				<img src="./images/shield_4.png" alt="">
+				<img src="./images/shield_5.png" alt="">
+				<img src="./images/shield_6.png" alt="">
+				<img src="./images/shield_7.png" alt="">
+				<img src="./images/shield_8.png" alt="">
+				<img src="./images/shield_9.png" alt="">
+			</div>
+			<div class="info"></div>
+		</div>
+		<div class="section third">
+			<div class="info"></div>
+			<div class="circle"></div>
+			<div class="rocket"></div>
+		</div>
+		<div class="section fourth">
+			<div class="news">
+			   <div class="seach">
+			   </div>     
+			   <div class="key">
+			   </div>
+			   <div class="img">
+					 <div class="res"></div>
+				 </div>
+			</div>
+			<div class="info"></div>
+		</div>
+		<div class="section fifth"></div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js//jquery.fullPage.min.js"></script>
+	<script>
+	  $('.fullpage').fullpage({
+		  // 设置背景颜色
+		sectionsColor : ['#0DA5D6', '#2AB561','#DE8910','#16BA9D','#0DA5D6'],
+		  // 页面加载后 执行动画
+		afterLoad: function(a, index){
+		  // 清除之前的动画类名
+		  $('.section').removeClass('move');
+		  setInterval(function(){
+			// 根据索引值给当前页面增加动画类名
+			$('.section').eq(index-1).addClass('move');
+		  },20)
+		  
+
+		},
+	  });
+	</script>
+</body>
+</html>
